@@ -14,7 +14,7 @@ script_dir = os.path.dirname(__file__)
 companies = [{"id": 1, "name": "Company One"}, {"id": 2, "name": "Company Two"}]
 
 
-api = Flask(__name__, static_url_path='', static_folder=local_base_dir)
+api = Flask(__name__, static_url_path='/url_www', static_folder=local_base_dir)
 
 @api.route('/companies', methods=['GET'])
 def get_companies():
