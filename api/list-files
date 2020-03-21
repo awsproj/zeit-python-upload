@@ -1,0 +1,14 @@
+
+list-files
+
+
+ls -l
+-rwxrwxr-x   2496 Mar  8 22:32 index.py
+-rwxrwxr-x   2496 Mar  8 22:32 index2.py
+-rwxrwxr-x   1674 Mar  1 20:04 index3.py
+-rw-rw-r--      0 Mar 21 10:42 list-files
+-rwxrwxr-x   1005 Mar  8 19:53 url_test_paths.py
+-rwxrwxr-x  11931 Mar 11 00:52 url_test_pub.py
+-rwxrwxr-x  13575 Mar 11 09:09 url_test_server.py
+
+

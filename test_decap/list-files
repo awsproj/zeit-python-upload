@@ -1,0 +1,11 @@
+
+list-files
+
+
+ls -l
+
+-rw-rw-r--      0 Mar 21 10:46 list-files
+-rwxrwxr-x  10149 Mar  1 14:47 video_chn0_decap.py
+-rwxrwxr-x   7550 Mar  1 14:47 video_chn2_decap.py
+
+

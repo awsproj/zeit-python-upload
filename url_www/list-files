@@ -1,0 +1,10 @@
+
+list-files
+
+
+$ find . -type f | xargs ls -l
+-rwxrwxr-x   1333 Mar  1 18:50 ./index.html
+-rwxrwxr-x  88145 Mar  1 14:47 ./jqueryscripts/jquery-3.4.1.min.js
+-rw-rw-r--      0 Mar  1 14:47 ./upload/0/dummy.txt
+
+

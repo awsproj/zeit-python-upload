@@ -1,0 +1,11 @@
+
+list-files
+
+
+ls -l
+
+-rw-rw-r--     0 Mar 21 10:43 list-files
+-rwxrwxr-x  6092 Nov 15 20:02 url_upload_get.c
+-rwxrwxr-x  9742 Nov 15 20:02 url_upload_post.c
+
+

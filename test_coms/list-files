@@ -1,0 +1,11 @@
+
+list-files
+
+
+ls -l
+
+-rw-rw-r--     0 Mar 21 10:44 list-files
+-rwxrwxr-x  3286 Mar  1 15:25 url_test_coms.py
+-rw-rw-r--   379 Mar  1 14:47 url_test_coms_tee.py
+
+

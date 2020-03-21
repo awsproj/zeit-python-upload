@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8" />
+
+<script src="/url_www/jqueryscripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    var vcap_global_update_in = false;
+    var vcap_global_update_count = 0;
+    var vcap_global_update_busy_count = 0;
+
+    function vcap_global_update() {
+      if ( !vcap_global_update_in ) {
+        vcap_global_update_in = true;
+        $("#div1").load("/api?check/demo_content");
+        vcap_global_update_count ++;
+        $("#div2").html("<p> javascript update count " +
+                        vcap_global_update_count.toString() +
+                        " &nbsp; &nbsp; busy " +
+                        vcap_global_update_busy_count.toString() +
+                        "</p>");
+        vcap_global_update_in = false;
+      } else {
+        vcap_global_update_busy_count ++;
+      };
+    };
+
+    $(document).ready(function(){
+      vcap_global_update();
+      $("#button_div1").click( vcap_global_update );
+      setInterval(vcap_global_update, 10000);
+    });
+
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<div id="div2"><h2>Let jQuery Script Change This Text</h2></div>
+
+<button id="button_div1">Get External Content</button>
+
+</body>
+</html>
+
+
