@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #  api/look/app_flask.py
 
-from flask import Flask
+from flask import Flask, request
 import json
 import os
 import sys
@@ -16,8 +16,12 @@ companies = [{"id": 1, "name": "Company One"}, {"id": 2, "name": "Company Two"}]
 
 api = Flask(__name__, static_url_path='/url_www', static_folder=local_base_dir)
 
-@api.route('/companies', methods=['GET'])
-def get_companies():
+@api.route('/api/<path:ver_str>', methods=['GET'])
+def get_api_v0xy(ver_str): # http://<ip>:<port>/api/v001?abcd=1234
+  the_ver = ver_str # v001
+  the_req = request
+  the_path = the_req.path # /api/v001
+  the_query = the_req.query_string # abcd=1234
   return json.dumps(companies)
 
 @api.route(local_base_url + '/<path:path>', methods=['GET'])
