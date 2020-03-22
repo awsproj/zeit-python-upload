@@ -33,6 +33,19 @@ def get_url_www(path):
       return "Error: requested content not in the directory tree"
   return api.send_static_file(path)
 
+@api.after_request
+def add_header(r):
+    """
+    Add headers to both force latest IE rendering engine or Chrome Frame,
+    and also to cache the rendered page for 10 minutes.
+    https://stackoverflow.com/questions/34066804/disabling-caching-in-flask
+    """
+    r.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    r.headers["Pragma"] = "no-cache"
+    r.headers["Expires"] = "0"
+    r.headers['Cache-Control'] = 'public, max-age=0'
+    return r
+
 if __name__ == '__main__':
     api.run()
 
